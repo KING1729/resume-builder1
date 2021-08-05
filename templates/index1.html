@@ -1,0 +1,148 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{details.personName}} - Curriculum Vitae</title>
+
+<meta name="viewport" content="width=device-width"/>
+<meta name="description" content="The Curriculum Vitae of {{mdetails.personName}}."/>
+<meta charset="UTF-8">
+
+<link type="text/css" rel="stylesheet" href="{% static 'style.css' %}">
+<link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body id="top">
+<div id="cv" class="instaFade">
+	<div class="mainDetails">
+
+		<div id="name">
+			<h1 class="quickFade delayTwo">{{details.personName}}</h1>
+			<h2 class="quickFade delayThree">{{details.jobTitle}}</h2>
+		</div>
+
+		<div id="contactDetails" class="quickFade delayFour">
+			<ul>
+				<li><a href="mailto:{{details.personName}}" target="_blank">{{details.email}}</a></li>
+				<li><a href="{{details.website}}">Personal website URL</a></li>
+				<li><a href="{{details.linkedIn}}">LinkedIn profile URL</a></li>
+				<li>{{mdetails.phoneNumber}} </li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+
+	<div id="mainArea" class="quickFade delayFive">
+		<section>
+			<article>
+				<div class="sectionTitle">
+					<h1>Personal Profile</h1>
+				</div>
+
+				<div class="sectionContent">
+					<p> {{details.personalProfile}}</p>
+				</div>
+			</article>
+			<div class="clear"></div>
+		</section>
+
+
+		<section>
+			<div class="sectionTitle">
+				<h1>Work Experience</h1>
+			</div>
+
+			<div class="sectionContent">
+				<article>
+					<h2>{{details.company1}}&nbsp</h2>
+					<i class="role">|&nbsp{{details.role1}}</i>
+					<p class="subDetails">{{details.company1startdate}}&nbsp-&nbsp{{details.company1enddate}}</p>
+					<p>{{details.jobDescription1}}</p>
+				</article>
+
+				<article>
+					<h2>{{details.company2}}&nbsp</h2>
+					<i class="role">|&nbsp{{details.role2}}</i>
+					<p class="subDetails">{{details.company2startdate}}&nbsp-&nbsp{{details.company2enddate}}</p>
+					<p>{{details.jobDescription2}}</p>
+				</article>
+
+			</div>
+			<div class="clear"></div>
+		</section>
+
+		<section>
+			<div class="sectionTitle">
+				<h1>Key Skills</h1>
+			</div>
+
+			<div class="sectionContent">
+				<ul class="keySkills">
+					<li>{{details.skill1}}</li>
+					<li>{{details.skill2}}</li>
+					<li>{{details.skill3}}</li>
+					<li>{{details.skill4}}</li>
+					<li>{{details.skill5}}</li>
+					<li>{{details.skill6}}</li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</section>
+
+		<section>
+			<div class="sectionTitle">
+				<h1>Education</h1>
+			</div>
+
+			<div class="sectionContent">
+				<article>
+					<h2>{{details.collegeName1}}</h2>
+					<i class="degree">|&nbsp{{edetails.degree1}}</i>
+					<p class="subDetails">{{details.college1startdate}}&nbsp-&nbsp{{details.college1enddate}}</p>
+					<p>CGPA-{{details.cgpa1}}/10</p>
+				</article>
+
+				<article>
+					<h2>{{edetails.collegeName2}}</h2>
+					<i class="degree">|&nbsp{{details.degree2}}</i>
+					<p class="subDetails">{{details.college2startdate}}&nbsp -&nbsp {{details.college2enddate}}</p>
+					<p>CGPA-{{details.cgpa2}}/10</p>
+				</article>
+			</div>
+			<div class="clear"></div>
+		</section>
+
+		<section>
+			<div class="sectionTitle">
+				<h1>Projects</h1>
+			</div>
+
+			<div class="sectionContent">
+				<article>
+					<h2>{{details.project1}}</h2>
+					<p>{{details.projectDescription1}}</p>
+				</article>
+
+				<article>
+					<h2>{{details.project2}}</h2>
+					<p>{{details.projectDescription2}}</p>
+				</article>
+			</div>
+			<div class="clear"></div>
+		</section>
+
+	</div>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3753241-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+</html>

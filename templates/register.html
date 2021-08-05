@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Build Your Resume</title>
+	<link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+<form action="register" method="POST">
+    {% csrf_token %}
+    <div class="wrapper">
+        <div class="title">
+            User Registration
+        </div>
+        <div class="form">
+            <div class="userDetails">
+                <h1>User Details</h1></br>
+                <div class="inputfield">
+                    <label>User Name</label>
+                    <input type="text" class="input" name="username">
+                </div>
+                <div class="inputfield">
+                    <label>First Name</label>
+                    <input type="text" class="input" name="first_name">
+                </div>
+                <div class="inputfield">
+                    <label>Last Name</label>
+                    <input type="text" class="input" name="last_name">
+                </div>
+                <div class="inputfield">
+                    <label>Email Address</label>
+                    <input type="email" class="input" name="email_id">
+                </div>
+                <div class="inputfield">
+                    <label>Password</label>
+                    <input type="text" class="input" name="password">
+                </div>
+                </br>
+                <div class="inputfield">
+                    <input type="submit" value="Register and Continue to Login" class="btn">
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+</html>

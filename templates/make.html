@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title> fill in details</title>
+    <h2 style="text-align:center; font-size: 30px">Fill Your Details</h2>
+</head>
+<body>
+{% if submitted %}
+  You have filled data
+{% else %}
+<div class="form-group" style="text-align:center; font-size: 25px">
+    <form action="make" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Just login once to see your Resume" class="btn btn-secondary" style="width:50%; border-radius:10px">
+
+    </form>
+    </br>
+</div>
+{% endif %}
+</body>
+</html>

@@ -1,0 +1,205 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Build Your Resume</title>
+	<link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+<form action="make" method="POST">
+    {% csrf_token %}
+    <div class="wrapper">
+        <div class="title">
+            Build Your Resume
+        </div>
+
+        <div class="form">
+            <div class="mainDetails">
+                <h1>Main Details</h1></br>
+                <div class="inputfield">
+                    <label>username</label>
+                    <input type="text" class="input" name="username">
+                </div>
+                <div class="inputfield">
+                    <label>Name</label>
+                    <input type="text" class="input" name="personName">
+                </div>
+                <div class="inputfield">
+                    <label>Personal profile </label>
+                    <input type="textarea" class="input" name="jobTitle">
+                </div>
+                <div class="inputfield">
+                    <label>Email Address</label>
+                    <input type="text" class="input" name="email">
+                </div>
+                <div class="inputfield">
+                    <label>Personal website</label>
+                    <input type="url" class="input" name="website">
+                </div>
+                <div class="inputfield">
+                    <label>LinkedIn profile</label>
+                    <input type="url" class="input" name="linkedIn">
+                </div>
+                <div class="inputfield">
+                    <label>Phone Number</label>
+                    <input type="text" class="input" name="phoneNumber">
+                </div>
+            </div>
+            </br>
+            <div class="personalDetails">
+                <h1>Personal Profile</h1></br>
+                <div class="inputfield">
+                    <label>Description</label>
+                    <input type="textarea" class="input" name="personalProfile">
+                </div>
+            </div>
+            </br>
+            <div class="workDetails">
+                <h1>Work Experience</h1></br>
+                <div class="inputfield">
+                    <label>Company1 name</label>
+                    <input type="text" class="input" name="company1">
+                </div>
+                <div class="inputfield">
+                    <label>Job Title1</label>
+                    <input type="text" class="input" name="role1">
+                </div>
+                <div class="inputfield">
+                    <label>start date</label>
+                    <input type="text" class="input" name="company1startdata">
+                </div>
+                <div class="inputfield">
+                    <label>end date</label>
+                    <input type="text" class="input" name="company1enddate">
+                </div>
+                <div class="inputfield">
+                    <label>Job Description1</label>
+                    <input type="text" class="input" name="jobDescription1">
+                </div>
+                </br>
+                <div class="inputfield">
+                    <label>Company2 name</label>
+                    <input type="text" class="input" name="company2">
+                </div>
+                <div class="inputfield">
+                    <label>Job Title2</label>
+                    <input type="text" class="input" name="role2">
+                </div>
+                <div class="inputfield">
+                    <label>start date</label>
+                    <input type="text" class="input" name="company2startdate">
+                </div>
+                <div class="inputfield">
+                    <label>end date</label>
+                    <input type="text" class="input" name="company2enddate">
+                </div>
+                <div class="inputfield">
+                    <label>Job Description2</label>
+                    <input type="text" class="input" name="jobDescription2">
+                </div>
+            </div>
+            </br>
+            <div class="skillDetails">
+                <h1>Skills</h1></br>
+                <div class="inputfield">
+                    <label>Skill1</label>
+                    <input type="text" class="input" name="skill1">
+                </div>
+                <div class="inputfield">
+                    <label>Skill2</label>
+                    <input type="text" class="input" name="skill2">
+                </div>
+                <div class="inputfield">
+                    <label>Skill3</label>
+                    <input type="text" class="input" name="skill3">
+                </div>
+                <div class="inputfield">
+                    <label>Skill4</label>
+                    <input type="text" class="input" name="skill4">
+                </div>
+                <div class="inputfield">
+                    <label>Skill5</label>
+                    <input type="text" class="input" name="skill5">
+                </div>
+                <div class="inputfield">
+                    <label>Skill6</label>
+                    <input type="text" class="input" name="skill6">
+                </div>
+            </div>
+            </br>
+            <div class="educationDetails">
+                <h1>Education Details</h1></br>
+                <div class="inputfield">
+                    <label>College1 name</label>
+                    <input type="text" class="input" name="college1">
+                </div>
+                <div class="inputfield">
+                    <label>Degree1</label>
+                    <input type="text" class="input" name="degree1">
+                </div>
+                <div class="inputfield">
+                    <label>start date</label>
+                    <input type="text" class="input" name="college1startdate">
+                </div>
+                <div class="inputfield">
+                    <label>end date</label>
+                    <input type="text" class="input" name="college1enddate">
+                </div>
+                <div class="inputfield">
+                    <label>CGPA</label>
+                    <input type="float" class="input" name="cgpa1">
+                </div>
+                </br>
+                <div class="inputfield">
+                    <label>College2 name</label>
+                    <input type="text" class="input" name="college2">
+                </div>
+                <div class="inputfield">
+                    <label>Degree2</label>
+                    <input type="text" class="input" name="degree2">
+                </div>
+                <div class="inputfield">
+                    <label>start date</label>
+                    <input type="text" class="input" name="college2startdate">
+                </div>
+                <div class="inputfield">
+                    <label>end date</label>
+                    <input type="text" class="input" name="college2enddate">
+                </div>
+                <div class="inputfield">
+                    <label>CGPA</label>
+                    <input type="float" class="input" name="cgpa2">
+                </div>
+            </div>
+            </br>
+            <div class="projectDetails">
+                <h1>Projects</h1></br>
+                <div class="inputfield">
+                    <label>Project1 name</label>
+                    <input type="text" class="input" name="project1">
+                </div>
+                <div class="inputfield">
+                    <label>Description1</label>
+                    <input type="textarea" class="input" name="projectDescription1">
+                </div>
+                </br>
+                <div class="inputfield">
+                    <label>Project2 name</label>
+                    <input type="text" class="input" name="project2">
+                </div>
+                <div class="inputfield">
+                    <label>Description2</label>
+                    <input type="textarea" class="input" name="projectDescription2">
+                </div>
+                </br>
+                </br>
+                <div class="inputfield">
+                    <input type="submit" value="Build Resume" class="btn">
+                </div>
+            </div>
+        </div>
+</form>
+</body>
+</html>

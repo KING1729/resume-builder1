@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+<form action="login" method="POST">
+    {% csrf_token %}
+    <div class="wrapper">
+        <div class="title">
+            Login Details
+        </div>
+        <div class="form">
+            <div class="userDetails">
+                <h1>User Details</h1></br>
+              <div class="inputfield">
+                    <label>User Name</label>
+                    <input type="text" class="input" name="username">
+              </div>
+              <div class="inputfield">
+                    <label>Password</label>
+                    <input type="text" class="input" name="password">
+              </div>
+              <div class="inputfield">
+                    <input type="submit" value="Build Your Resume" class="btn">
+              </div>
+            </div>
+        </div>
+  </div>
+</form>
+</body>
+</html>
